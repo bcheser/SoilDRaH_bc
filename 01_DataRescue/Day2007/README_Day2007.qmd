@@ -3,18 +3,47 @@ title: "Data Rescue: Day et al 2007"
 format:
   html:
     toc: true
-    eval: false #default to not evaluating the chunks, override this the template is completed
+    eval: true #default to not evaluating the chunks, override this the template is completed
 date: last-modified
 date-format: YYYY-MMMM
 bibliography:
   - Day2007_Methods.bib #contains the citations in the methods section
   - Day2007.bib #contains citation for the data source, generally a single citation of the primary paper
 authors: #author scheme from https://quarto.org/docs/journals/authors.html
-  - id: ktoddbrown #use the github name as an id
+  - id: angelacanini-a11y #use the github name as an id
     name:
-      given: Katherine
-      family: Todd-Brown
-    orcid: 0000-0002-3109-8130
+      given: Angela
+      family: Canini
+    affiliation:
+      - ref: uf
+    role: #TODO define these roles and add reference
+      - transcription: primary table1, secondary methods.md #secondary, review
+ #     - standardization: review #review
+ #     - curation: lead #review
+  - id: bcheser #use the github name as an id
+    name:
+      given: Ben
+      family: Cheser
+    affiliation:
+      - ref: uf
+    role: #TODO define these roles and add reference
+      - transcription: primary table3 & citations, secondary table2 #secondary, review
+ #     - standardization: lead #review
+ #    - curation: lead #review
+  - id: JennavieveK #use the github name as an id
+    name:
+      given: Jenna
+      family: Keefer
+    affiliation:
+      - ref: uf
+    role: #TODO define these roles and add reference
+      - transcription: primary table2, secondary table1 & citations #secondary, review
+ #     - standardization: lead #review
+ #     - curation: lead #review
+  - id: vaasukimarupaka #use the github name as an id
+    name:
+      given: Vaasuki
+      family: Marupaka
     affiliation:
       - ref: uf-ees
     role: #TODO define these roles and add reference
@@ -43,25 +72,25 @@ affiliations:
 timelog:
   - activity: 
       description: add general UF affilation
-      who: ktoddbrown #github username
+      who: vaasukimarupaka #github username
       #when you started and ended, can be just a year or down to the minute
-      start: 2026-01-29 T1530
+      start: 2026-04-03 T1530
       #start: YYYY-MM-DD THH:MM
       #alternatively duration can be combined with a being/end
-      duration: P05M
+      duration: P30M
   - activity: 
-      description: revised execute with only provided files
-      who: ktoddbrown #github username
+      description: worked on readme file
+      who: vaasukimarupaka #github username
       #when you started and ended, can be just a year or down to the minute
-      start: 2025-01-22 T1400
+      start: 2026-04-10 T1600
       #start: YYYY-MM-DD THH:MM
       #alternatively duration can be combined with a being/end
-      duration: P45M
+      duration: P20M
   - activity: 
-      description: Revise based on feedback
-      who: ktoddbrown #github username
+      description: Revise based on feedback from pull request
+      who: vaasukimarupaka #github username
       #when you started and ended, can be just a year or down to the minute
-      end: 2025-11-26
+      end: 2026-09-02
       #start: YYYY-MM-DD THH:MM
       #alternatively duration can be combined with a being/end
       duration: P30M
@@ -87,7 +116,6 @@ methods.file <- "Day2007_Methods.md"
 table1.file <- 'Day2007_Table1.csv'
 table2.file <- 'Day2007_Table2.csv'
 table3.file <- 'Day2007_Table3.csv'
-#figureM.file <- 'AuthorYYYY_FigureM.csv' # No figures for this paper
 
 # Bibliography files
 primaryCitation.file <- 'Day2007.bib'
@@ -198,16 +226,15 @@ These files are in the Day2007 data rescue.
   - [ ] address any revisions in your pull request review
   - [ ] celebrate!
 
-## Table N
+## Table 1
 
 <!--- Common table modifications include: inserting an extra column to pivot sub-headers, filling in NA to identify blanks, and adding Latex or Markdown to denote formatting.---->
 
-Table 1 was modified ....
+Table 1 was unmodified.
 
 ```{r}
 #| label: table1Check
-#| eval: false #remove when you have the file transcribed
-
+#| eval: true #remove when you have the file transcribed
 
 read_csv(file = table1.file, #read in the specific file
          skip = 1, #skip the first line with the caption
@@ -223,12 +250,27 @@ read_csv(file = table1.file, #read in the specific file
   )
 ```
 
-Table 2 was modified ....
+And is crosschecked with the secondary transcription
+
+```{bash}
+#| label: compareTable1
+#| eval: true
+
+# You will want to repeat the line below to cross check each csv and md file in the
+#... data rescue. Having no lines flagged by this command will ensure that each character matches exactly.
+
+diff --strip-trailing-cr --suppress-common-lines -y temp/Day2007_Table1_JK.csv Day2007_Table1.csv 
+
+```
+
+
+## Table 2
+
+Table 2 was unmodified.
 
 ```{r}
 #| label: table2Check
-#| eval: false #remove when you have the file transcribed
-
+#| eval: true #remove when you have the file transcribed
 
 read_csv(file = table2.file, #read in the specific file
          skip = 1, #skip the first line with the caption
@@ -244,12 +286,26 @@ read_csv(file = table2.file, #read in the specific file
   )
 ```
 
-Table 3 was modified ....
+And is crosschecked with the secondary transcription
+
+```{bash}
+#| label: compareTable1
+#| eval: true
+
+# You will want to repeat the line below to cross check each csv and md file in the
+#... data rescue. Having no lines flagged by this command will ensure that each character matches exactly.
+
+diff --strip-trailing-cr --suppress-common-lines -y temp/Day2007_Table2_BC.csv Day2007_Table2.csv 
+
+```
+
+## Table 3
+
+Table 3 was unmodified.
 
 ```{r}
 #| label: table3Check
-#| eval: false #remove when you have the file transcribed
-
+#| eval: true #remove when you have the file transcribed
 
 read_csv(file = table3.file, #read in the specific file
          skip = 1, #skip the first line with the caption
@@ -268,13 +324,14 @@ read_csv(file = table3.file, #read in the specific file
 And is crosschecked with the secondary transcription
 
 ```{bash}
-#| label: compareTableN
-#| eval: false
+#| label: compareTable1
+#| eval: true
 
 # You will want to repeat the line below to cross check each csv and md file in the
 #... data rescue. Having no lines flagged by this command will ensure that each character matches exactly.
 
-diff --strip-trailing-cr --suppress-common-lines -y temp/AuthorYYYY_TableN_ABC.md AuthorYYYY_TableN.md
+diff --strip-trailing-cr --suppress-common-lines -y temp/Day2007_Table3_VM.csv Day2007_Table3.csv 
+
 ```
 
 ## Methods
@@ -283,16 +340,14 @@ Any different to the cross check for the methods section will be output after th
 
 ```{bash}
 #| label: compareMethods
-#| eval: false
+#| eval: true
+
 # You will want to repeat the line below to cross check each csv and md file in the
 #... data rescue. Having no lines flagged by this command will ensure that each character matches exactly.
-diff --strip-trailing-cr --suppress-common-lines -y temp/AuthorYYYY_Methods_ABC.md AuthorYYYY_Methods.md
-```
 
-```{bash eval=FALSE, echo=FALSE}
-diff --strip-trailing-cr -suppress-common-lines -y Day2007_Methods_VM.md Day2007_Methods_AC.md
-```
+diff --strip-trailing-cr --suppress-common-lines -y temp/Day2007_Methods_VM.md Day2007_Methods.md
 
+```
 
 ### Methods  - Text
 
