@@ -101,7 +101,23 @@ timelog:
       end: 2026-04-10
       #start: YYYY-MM-DD THH:MM
       #alternatively duration can be combined with a being/end
-      duration: P120M
+      duration: P120
+  - activity: 
+      description: Transcribed table 1
+      who: angelacanini-a11y #github username
+      #when you started and ended, can be just a year or down to the minute
+      end: 2026-04-02
+      #start: YYYY-MM-DD THH:MM
+      #alternatively duration can be combined with a being/end
+      duration: P55M
+  - activity: 
+      description: secondary transcription for methods
+      who: angelacanini-a11y #github username
+      #when you started and ended, can be just a year or down to the minute
+      end: 2026-04-04
+      #start: YYYY-MM-DD THH:MM
+      #alternatively duration can be combined with a being/end
+      duration: P40M
 version: 'vs202512' #template version, remove before use
 ---
 
