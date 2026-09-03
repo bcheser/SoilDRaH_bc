@@ -118,6 +118,38 @@ timelog:
       #start: YYYY-MM-DD THH:MM
       #alternatively duration can be combined with a being/end
       duration: P40M
+        - activity: 
+      description: transcribed table 3
+      who: bcheser #github username
+      #when you started and ended, can be just a year or down to the minute
+      start: 2026-04-03 T1530
+      #start: YYYY-MM-DD THH:MM
+      #alternatively duration can be combined with a being/end
+      duration: P2H30M
+     activity: 
+      description: secondary transcription for table 2
+      who: bcheser #github username
+      #when you started and ended, can be just a year or down to the minute
+      start: 2026-04-04
+      #start: YYYY-MM-DD THH:MM
+      #alternatively duration can be combined with a being/end
+      duration: P1H30M
+     activity: 
+      description: created citations section
+      who: bcheser #github username
+      #when you started and ended, can be just a year or down to the minute
+      start: 2026-04-10
+      #start: YYYY-MM-DD THH:MM
+      #alternatively duration can be combined with a being/end
+      duration: P1H00M
+   - activity: 
+      description: edited activity section
+      who: bcheser #github username
+      #when you started and ended, can be just a year or down to the minute
+      start: 2026-09-03 T1600
+      #start: YYYY-MM-DD THH:MM
+      #alternatively duration can be combined with a being/end
+      duration: P10M
 version: 'vs202512' #template version, remove before use
 ---
 
