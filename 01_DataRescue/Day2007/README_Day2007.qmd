@@ -32,7 +32,7 @@ authors: #author scheme from https://quarto.org/docs/journals/authors.html
  #    - curation: lead #review
   - id: JennavieveK #use the github name as an id
     name:
-      given: Jenna
+      given: Jennavieve
       family: Keefer
     affiliation:
       - ref: uf
@@ -94,6 +94,14 @@ timelog:
       #start: YYYY-MM-DD THH:MM
       #alternatively duration can be combined with a being/end
       duration: P30M
+  - activity: 
+      description: Transcribed table 1, table 2, and citations
+      who: JennavieveK #github username
+      #when you started and ended, can be just a year or down to the minute
+      end: 2026-04-10
+      #start: YYYY-MM-DD THH:MM
+      #alternatively duration can be combined with a being/end
+      duration: P120M
 version: 'vs202512' #template version, remove before use
 ---
 
