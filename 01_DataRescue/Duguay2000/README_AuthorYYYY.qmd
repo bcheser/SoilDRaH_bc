@@ -125,9 +125,20 @@ is_type.file <- '../../semantics/SoilDRaHVocabulary_is_type.csv'
 
 # Data Summary
 
-<!---- Fill in the full citation here, generally found on the journal page and link in the issue that you started on GitHub. Though this is at the top of the document, this should be one of the last things you do because a lot of this will be a direct copy-paste into the issue template. --->
+Kathleen J Duguay, John N Klironomos,
+Direct and indirect effects of enhanced UV-B radiation on the decomposing and competitive abilities of saprobic fungi,
+Applied Soil Ecology,
+Volume 14, Issue 2,
+2000,
+Pages 157-164,
+https://doi.org/10.1016/S0929-1393(00)00049-4.
 
-> Full citation here, exact format does not matter but it should be complete enough to find the paper. Please include the doi
+
+
+@Duguay2000 aims to compare the effects of UV-B radiation on litter decomposition, both directly and indirectly and competition between saprobic fungi.
+The study contains two main experiments; the first tested the impact of the UV-B on both the litter during growth (indirect effect) and during decomposition (direct effect), and the second experiment measured the difference in decomposition rates between pigmented and hyaline fungi.
+
+
 
 For the discussion of this data rescue see the Github issue: https://github.com/ktoddbrown/SoilDRaH/issues/#.
 
